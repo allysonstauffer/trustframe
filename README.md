@@ -12,7 +12,27 @@ stability — and defines conditions where human review is warranted.
 [Image-Deepfake-Detectors-Public-Library](https://github.com/truebees-ai/Image-Deepfake-Detectors-Public-Library)
 
 ## Structure
-(paste the folder structure from my last message)
+trustframe/
+├── README.md                  ← overview, motivation, demo gif/image
+├── LEARNING_LOG.md            ← your "what I learned" file (mentor suggested this)
+├── TODO.md                    ← living to-do / progress tracker
+├── requirements.txt
+├── data/
+│   └── README.md              ← explains datasets used (don't commit raw images)
+├── transforms/
+│   └── distortions.py         ← blur, compression, brightness, resize
+├── eval/
+│   ├── pipeline.py            ← core eval loop
+│   ├── metrics.py             ← accuracy, confidence, ECE, stability
+│   └── thresholds.py          ← "don't trust" logic
+├── notebooks/
+│   ├── 01_baseline.ipynb
+│   ├── 02_distortions.ipynb
+│   └── 03_failure_analysis.ipynb
+├── results/
+│   └── figures/               ← plots, confusion matrices, calibration curves
+└── deploy/
+    └── api_sketch.py          ← lightweight Flask/FastAPI wrapper (Week 9–10)
 
 ## Status
 🚧 In progress — Week 1/10
